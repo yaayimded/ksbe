@@ -275,11 +275,11 @@ body
   
   /* Különböző háttérképek a két gombhoz */
   .btn-1 {
-    background-image: url("edzes.jpg");
+    background-image: url("kepek/edzes.jpg");
   }
   
   .btn-2 {
-    background-image: url("gyozelem.jpg");
+    background-image: url("kepek/gyozelem.jpg");
   }
   
   
