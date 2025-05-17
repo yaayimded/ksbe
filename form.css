@@ -65,7 +65,7 @@ body
   .navbar a {
     padding: 15px 25px;
     text-decoration: none;
-    color: #333;
+    color: black;
     font-size: 140%;
     transition: background-color 0.3s ease;
   }
