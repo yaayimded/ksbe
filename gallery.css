@@ -286,7 +286,7 @@ body
   /* Hamburger gomb alapstílus */
 .menu-toggle {
   display: none;
-  font-size: 30px;
+  font-size: 140%;
   cursor: pointer;
   padding: 10px 20px;
   background-color: red;
