@@ -78,13 +78,13 @@ body
   {
     background-color: rgb(5, 183, 5);
   }
-
+/*
   #fb
   {
     text-align: right;
     justify-content: right;
   }
-
+*/
   #fb:hover
   {
     background-color: blue;
@@ -122,12 +122,12 @@ body
   font-size: 30px;
   cursor: pointer;
   padding: 10px 20px;
-  background-color: lightgreen;
+  background-color: red;
   border-bottom: 2px solid #ccc;
 }
 
 /* Mobilnézet */
-@media (max-width: 768px) {
+@media (max-width: 890px) {
   .menu-toggle {
     display: block;
   }
@@ -136,6 +136,7 @@ body
     flex-direction: column;
     align-items: center;
     display: none; /* alapból rejtve */
+    background-color: red;
   }
 
   .navbar.active {

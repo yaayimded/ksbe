@@ -118,15 +118,16 @@ body
   /* Hamburger gomb alapstílus */
 .menu-toggle {
   display: none;
-  font-size: 30px;
+  font-size: 140%;
   cursor: pointer;
   padding: 10px 20px;
-  background-color: lightgreen;
+  background-color: red;
   border-bottom: 2px solid #ccc;
+  color: black;
 }
 
 /* Mobilnézet */
-@media (max-width: 768px) {
+@media (max-width: 890px) {
   .menu-toggle {
     display: block;
   }
@@ -135,6 +136,7 @@ body
     flex-direction: column;
     align-items: center;
     display: none; /* alapból rejtve */
+    background-color: red;
   }
 
   .navbar.active {
