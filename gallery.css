@@ -1,0 +1,328 @@
+body 
+{
+        margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+  
+  .header 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+  
+  .logo 
+{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .title {
+    text-align: center;
+    align-self: last baseline;
+    flex-grow: 1;
+  }
+  
+  .title h1 {
+    margin: 0;
+    font-size: 300%;
+    /*background-color: #ccc;*/
+    font-weight: bold;
+    color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    border-top: 2px solid black;
+  }
+
+  .navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  body.sticky-nav-active {
+    padding-top: 60px; /* vagy amekkora a navbar magassága */
+  }
+  
+  .navbar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 140%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(5, 183, 5);
+  }
+
+  .active
+  {
+    background-color: rgb(5, 183, 5);
+  }
+
+  #fb
+  {
+    text-align: right;
+    justify-content: right;
+  }
+
+  #fb:hover
+  {
+    background-color: blue;
+    color: white;
+  }
+
+  .map {
+    flex: 1 1 300px;
+  }
+  
+  .map img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+  }
+
+  /* Lightbox overlay */
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay img.large-map {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  cursor: zoom-out;
+}
+
+/* Thumbnail hover effect */
+.map img.thumbnail {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.map img.thumbnail:hover {
+  transform: scale(1.02);
+}
+
+  .content {
+    min-height: calc(100vh - 200px); /* hogy kitöltse a képernyőt header + nav után */
+    display: flex;
+    line-height: 130%;
+    justify-content: center;
+    align-items: top;
+    padding: 40px;
+    /*background-image: url('csapat2.jpg');  */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Csak a szövegdoboz középen */
+  .content-box {
+    background-color: black;
+    color: black;
+    padding: 40px;
+    /*max-width: 800px;*/
+    width: 200%;
+    /*border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);*/
+    text-align: left;
+  }
+
+  .kiscim
+  {
+    color: white;
+  }
+
+  figcaption
+  {
+    color: white;
+  }
+
+
+  .coaches {
+    margin: 40px 0;
+    padding: 0 20px;
+  }
+  
+  .coaches h2 {
+    margin-bottom: 20px;
+  }
+  
+  .coach-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .flickity-viewport
+  {
+    transition: height 0.2s;
+  }
+
+  .carousel-pic
+  {
+    height: 10%;
+  }
+
+  .carousel-cell
+  {
+    width: 45%; /* vagy 50% - padding miatt lehet picit kevesebb */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.7);
+  }
+
+  .carousel-cell img
+  {
+    max-height: 600px;
+    max-width: 100%;
+    /*height: auto;
+    width: auto;*/
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
+
+  .carousel-cell.is-selected
+  {
+    /*max-width: 100%;
+    max-height: 600px;
+    height: auto;
+    width: auto;*/
+
+    transform: scale(1.1);
+    z-index: 2;
+    filter: brightness(1);
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .image-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    text-decoration: none;
+    color: white;
+
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+  }
+  
+  .image-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Különböző háttérképek a két gombhoz */
+  .btn-1 {
+    background-image: url("edzes.jpg");
+  }
+  
+  .btn-2 {
+    background-image: url("gyozelem.jpg");
+  }
+  
+  
+  /* Hamburger gomb alapstílus */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: lightgreen;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Mobilnézet */
+@media (max-width: 768px) {
+  .trainers {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    display: none; /* alapból rejtve */
+  }
+
+  .navbar.active {
+    display: flex; /* megjelenítés gombra */
+  }
+
+  .navbar a {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #ccc;
+  }
+
+  .title h1
+  {
+    font-size: 100%;
+  }
+}
+

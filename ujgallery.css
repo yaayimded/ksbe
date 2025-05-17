@@ -1,0 +1,171 @@
+/* Általános beállítások */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 🔧 MINDEN címsor visszakapja a félkövérséget */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Fejléc */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightblue;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .logo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .title {
+    text-align: center;
+    align-self: last baseline;
+    flex-grow: 1;
+  }
+  
+  .title h1 {
+    margin: 0;
+    font-size: 300%;
+    font-weight: bold; /* 🔧 direktben h1-hez is */
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 🔧 vertikális középre igazítás */
+    background-color: lightgreen;
+    border-top: 2px solid black;
+    border-bottom: 2px solid #ccc;
+    height: 60px; /* 🔧 fix magasság */
+  }
+  
+  .navbar a {
+    padding: 20px; /* 🔧 kevesebb padding, alacsonyabb navbar */
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: green;
+  }
+  
+  .navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  body.sticky-nav-active {
+    padding-top: 60px;
+  }
+  
+  #fb {
+    text-align: right;
+    justify-content: right;
+  }
+  
+  #fb:hover {
+    background-color: blue;
+    color: white;
+  }
+  
+  /* Edzők */
+  .coaches {
+    margin: 40px 0;
+    padding: 0 20px;
+  }
+  
+  .coaches h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Galéria */
+  .coach-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* ✅ Carousel */
+  .carousel-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .carousel-inner img,
+  .carousel-item img {
+    width: 100% !important;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hamburger menü */
+  .menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: lightgreen;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  /* Mobil */
+  @media (max-width: 768px) {
+    .trainers {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      height: auto; /* mobilon automatikus magasság */
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  
+    .navbar a {
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #ccc;
+    }
+  }
+  

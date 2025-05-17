@@ -1,0 +1,154 @@
+body 
+{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.header 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+  
+  .logo 
+{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .title {
+    text-align: center;
+    align-self: last baseline;
+    flex-grow: 1;
+  }
+  
+  .title h1 {
+    margin: 0;
+    font-size: 300%;
+    /*background-color: #ccc;*/
+    color: white;
+  }
+  
+  .navbar {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  border-top: 2px solid black;
+  transition: all 0.3s ease;
+  }
+  
+  .navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  body.sticky-nav-active {
+    padding-top: 60px; /* vagy amekkora a navbar magassága */
+  }
+
+  .navbar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 140%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(5, 183, 5);
+  }
+
+  .active
+  {
+    background-color: rgb(5, 183, 5);
+    /*color: white;*/
+  }
+
+  #fb:hover
+  {
+    background-color: blue;
+    color: white;
+  }
+  .motiv
+  {
+    text-align: center;
+  }
+
+  .content {
+    min-height: calc(100vh - 200px); /* hogy kitöltse a képernyőt header + nav után */
+    display: flex;
+    line-height: 160%;
+    justify-content: center;
+    align-items: top;
+    padding: 40px;
+    background-image: url('csapat2.jpg'); /* marad érintetlenül */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Csak a szövegdoboz középen */
+  .content-box {
+    background-color: rgba(214, 202, 167, 0.95);
+    color: black;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+  /* Hamburger gomb alapstílus */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: lightgreen;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Mobilnézet */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    display: none; /* alapból rejtve */
+  }
+
+  .navbar.active {
+    display: flex; /* megjelenítés gombra */
+  }
+
+  .navbar a {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #ccc;
+  }
+
+  .title h1 
+  {
+    font-size: 200%;
+  }
+}

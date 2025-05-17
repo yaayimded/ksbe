@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+    <html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kincses Sándor Birkózó SE - Elérhetőségek</title>
+  <link rel="stylesheet" href="elerhetoseg.css">
+</head>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    const body = document.body;
+
+    if(window.innerWidth > 768)
+    {
+      if (window.scrollY > 170) {
+        navbar.classList.add("sticky");
+        body.classList.add("sticky-nav-active");
+      } else {
+        navbar.classList.remove("sticky");
+        body.classList.remove("sticky-nav-active");
+    }
+  }
+  });
+</script>
+
+<body>
+    <header class="header">
+      <div class="logo logo-left">
+        <img src="birk_logo.png" alt="Logo 1">
+      </div>
+      <div class="title">
+        <h1>Kincses Sándor Birkózó SE</h1>
+      </div>
+      <div class="logo logo-right">
+          <!-- EZEN MÉG ALAKÍTANI KELL-->
+        <img src="birk_logo2.jpg" alt="Logo 2">
+      </div>
+    </header>
+  
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html">Kezdőlap</a>
+      <a href="elerhetoseg.html" class="active">Elérhetőség</a>
+      <a href="reviews.html">Vélemények</a>
+      <a href="form.html">Űrlapok</a>
+      <a href="gallery.html">Galéria</a>
+      <a href="https://www.facebook.com/birkozas.hajduboszormeny" id="fb" target="_blank">Facebook</a>
+    </nav>
+
+    <section class="contact-section">
+      <div class="contact-info">
+        <p><strong>Kérjük ajánlja fel adója 1%-át!</strong></p>
+        <p><strong>Egyesület neve:</strong> Kincses Sándor Birkózó és Szabadidő Sportegyesület</p>
+        <p><strong>Cím:</strong> 4220 Hajdúböszörmény, Középkert utca 56.</p>
+        <p><strong>Adószám:</strong> 18569814-1-09</p>
+        <p><strong>Nyilvántartási szám:</strong> 09 02 0002935</p>
+        <p><strong>Fő tevékenység:</strong> 9312.Sportegyesületi tevékenység</p><br>
+        <p><strong>E-mail:</strong> info@melyep-h.hu</p>
+        <p><strong>Tel.:</strong> +36 20 466 7795</p>
+        <p><strong>Edzések helyszíne:</strong> 4220 Hajdúböszörmény, Bocskai tér 10.</p>
+  
+        <table>
+          <caption>
+            <details>
+              <summary>Edzések időpontja</summary>
+              <p>Edzők: Radócz János, Horváth Csaba és Kathi Sándor</p>
+            </details>
+          </caption>
+          <thead>
+            <tr>
+              <th>Napok</th>
+              <th>Időpontok</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hétfő</td>
+              <td>17:30 - 19:00</td>
+            </tr>
+            <tr>
+              <td>Szerda</td>
+              <td>17:30 - 19:00</td>
+            </tr>
+            <tr>
+              <td>Péntek</td>
+              <td>17:30 - 19:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="map">
+        <img src="csapat2.jpg" alt="Térkép thumbnail" class="thumbnail" onclick="openMap()">
+      </div>
+
+      <div id="mapOverlay" class="overlay" onclick="closeMap()">
+        <img src="csapat2.jpg" alt="Nagy térkép" class="large-map">
+      </div>
+    </section>
+  
+    <section class="video-section">
+      <!-- Itt lehet iframe YouTube beágyazás -->
+      <div class="video-placeholder">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygULcmljayBhc3RsZXk%3D" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Térkép thumbnail scriptje -->
+    <script>
+      function openMap() {
+        document.getElementById('mapOverlay').style.display = 'flex';
+      }
+    
+      function closeMap() {
+        document.getElementById('mapOverlay').style.display = 'none';
+      }
+    </script>
+    
+    <!-- Mobilos navbar -->
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const navbar = document.getElementById('navbar');
+    
+      toggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+      });
+    </script>
+</body>

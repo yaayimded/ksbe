@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+    <html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kincses Sándor Birkózó SE - Galéria</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<!-- NAVBAR RAGADÁS -->
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    const body = document.body;
+
+    if(window.innerWidth > 768)
+    {
+      if (window.scrollY > 170) {
+        navbar.classList.add("sticky");
+        body.classList.add("sticky-nav-active");
+      } else {
+        navbar.classList.remove("sticky");
+        body.classList.remove("sticky-nav-active");
+    }
+  }
+  });
+</script>
+
+<body>
+    <header class="header">
+      <div class="logo logo-left">
+        <img src="birk_logo.png" alt="Logo 1">
+      </div>
+      <div class="title">
+        <h1>Kincses Sándor Birkózó SE</h1>
+      </div>
+      <div class="logo logo-right">
+          <!-- EZEN MÉG ALAKÍTANI KELL-->
+        <img src="birk_logo2.jpg" alt="Logo 2">
+      </div>
+    </header>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+  
+    <nav class="navbar" id="navbar">
+      <a href="index.html">Kezdőlap</a>
+      <a href="elerhetoseg.html">Elérhetőség</a>
+      <a href="reviews.html">Vélemények</a>
+      <a href="form.html">Űrlapok</a>
+      <a href="gallery.html" class="active">Galéria</a>
+      <a href="https://www.facebook.com/birkozas.hajduboszormeny" id="fb" target="_blank">Facebook</a>
+    </nav>
+
+    <main class="content">
+      <div class="content-box">
+    <section class="coaches">
+      <h2><strong>Edzők:</strong></h2>
+      <div class="coach-gallery">
+        <div class="coach">
+          <figure>
+          <img src="edzők.jpg" alt="Radóczi János és Kathi Sándor">
+            <figcaption>Radóczi János és Kathi Sándor</figcaption>
+          </figure>
+        </div>
+        <div class="coach">
+          <figure>
+          <img src="csabi2.jpg" alt="Horváth Csaba">
+          <figcaption>Horváth Csaba</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  
+      <h2 class="mt-5 mb-3"><strong>Ilyen volt, ilyen lett</strong></h2>
+
+      <div class="carousel-container">
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper">
+              <img src="csabi1.jpg" class="carousel-pic">
+              <a href="#carousel__slide4"
+                 class="carousel__prev">Go to last slide</a>
+              <a href="#carousel__slide2"
+                 class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"> <img src="csabi2.jpg" class="carousel-pic" ></div>
+            <a href="#carousel__slide1"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide3"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"><img src="ossz1.jpg" class="carousel-pic"></div>
+            <a href="#carousel__slide2"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide4"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"><img src="ossz2.jpg" class="carousel-pic"></div>
+            <a href="#carousel__slide3"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1"
+               class="carousel__next">Go to first slide</a>
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1"
+                 class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2"
+                 class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3"
+                 class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide4"
+                 class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+          </ol>
+        </aside>
+      </section>
+      </div>
+      </div>
+    </main>
+      
+    <!-- Mobilos menü megjelenítése -->
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const navbar = document.getElementById('navbar');
+    
+      toggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+      });
+    </script>
+</body>
