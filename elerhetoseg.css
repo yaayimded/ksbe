@@ -2,7 +2,7 @@ body
 {
         margin: 0;
     font-family: Arial, sans-serif;
-    background-color: whitesmoke;
+    background-color: black;
 }
   
   .header 
@@ -95,7 +95,7 @@ body
   
   .contact-info {
     flex: 1 1 300px;
-    background-color: lightcyan;
+    background-color: rgba(214, 202, 167, 0.95);
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -164,7 +164,6 @@ body
   transform: scale(1.02);
 }
 
-  
   .video-section {
     margin-top: 50px;
     align-content: center;
@@ -175,7 +174,7 @@ body
   .video-placeholder {
     align-items: center;
     width: 80%;
-    height: 400px;
+    height: 180%;
     border: 2px dashed #ccc;
     background-color: #f0f0f0;
   }
