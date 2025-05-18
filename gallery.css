@@ -156,7 +156,7 @@ body
     display: flex;
     line-height: 130%;
     justify-content: center;
-    align-items: top;
+    align-items: flex-start;
     padding: 40px;
     /*background-image: url('csapat2.jpg');  */
     background-size: cover;

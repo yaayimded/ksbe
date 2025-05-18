@@ -8,25 +8,6 @@
   <link rel="stylesheet" href="gallery.css">
 </head>
 
-<!-- NAVBAR RAGADÁS -->
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    const body = document.body;
-
-    if(window.innerWidth > 768)
-    {
-      if (window.scrollY > 170) {
-        navbar.classList.add("sticky");
-        body.classList.add("sticky-nav-active");
-      } else {
-        navbar.classList.remove("sticky");
-        body.classList.remove("sticky-nav-active");
-    }
-  }
-  });
-</script>
-
 <body>
   <!-- Ugrás a tartalomhoz link – az oldal legelején -->
   <a href="#main-content" class="skip-link">Ugrás a fő tartalomhoz</a>
@@ -65,10 +46,10 @@
         <div class="coach">
           <figure>
             <div class="map">
-          <img src="kepek/edzők.jpg" alt="Edzők Radóczi János és Kathi Sándor" class="thumbnail" onclick="openMap()">
+          <img src="kepek/edzok.jpg" alt="Edzők Radóczi János és Kathi Sándor" class="thumbnail" onclick="openMap()">
             </div>
           <div id="mapOverlay" class="overlay" onclick="closeMap()">
-            <img src="kepek/edzők.jpg" class="large-map" alt="Nagyított kép edzőkről Radóczi Jánosról és Kathi Sándorról">
+            <img src="kepek/edzok.jpg" class="large-map" alt="Nagyított kép edzőkről Radóczi Jánosról és Kathi Sándorról">
           </div>
             <figcaption>Radóczi János és Kathi Sándor</figcaption>
           </figure>
@@ -108,6 +89,7 @@
           Facebook videók
         </a>
       </div>
+      </div>
     </main>
 
     <!-- Térkép thumbnail scriptje -->
@@ -130,5 +112,25 @@
         navbar.classList.toggle('active');
       });
     </script>
+
+<!-- NAVBAR RAGADÁS -->
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    const body = document.body;
+
+    if(window.innerWidth > 768)
+    {
+      if (window.scrollY > 170) {
+        navbar.classList.add("sticky");
+        body.classList.add("sticky-nav-active");
+      } else {
+        navbar.classList.remove("sticky");
+        body.classList.remove("sticky-nav-active");
+    }
+  }
+  });
+</script>
+
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>

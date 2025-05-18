@@ -7,25 +7,6 @@
   <link rel="stylesheet" href="elerhetoseg.css">
 </head>
 
-<!-- Navbar ragadása -->
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    const body = document.body;
-
-    if(window.innerWidth > 768)
-    {
-      if (window.scrollY > 170) {
-        navbar.classList.add("sticky");
-        body.classList.add("sticky-nav-active");
-      } else {
-        navbar.classList.remove("sticky");
-        body.classList.remove("sticky-nav-active");
-    }
-  }
-  });
-</script>
-
 <body>
   <!-- Ugrás a tartalomhoz link – az oldal legelején -->
   <a href="#main-content" class="skip-link">Ugrás a fő tartalomhoz</a>
@@ -58,6 +39,7 @@
 
     <section class="contact-section">
       <div class="contact-info">
+        <h2>Elérhetőségek</h2>
         <p><strong>Kérjük ajánlja fel adója 1%-át!</strong></p>
         <p><strong>Egyesület neve:</strong> Kincses Sándor Birkózó és Szabadidő Sportegyesület</p>
         <p><strong>Cím:</strong> 4220 Hajdúböszörmény, Középkert utca 56.</p>
@@ -108,9 +90,10 @@
     </section>
   
     <section class="video-section">
+      <h2>Videó</h2>
       <!-- Itt lehet iframe YouTube beágyazás -->
       <div class="video-placeholder">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=jZySLYdPqh8" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/watch?v=jZySLYdPqh8" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -134,4 +117,23 @@
         navbar.classList.toggle('active');
       });
     </script>
+
+    <!-- Navbar ragadása -->
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    const body = document.body;
+
+    if(window.innerWidth > 768)
+    {
+      if (window.scrollY > 170) {
+        navbar.classList.add("sticky");
+        body.classList.add("sticky-nav-active");
+      } else {
+        navbar.classList.remove("sticky");
+        body.classList.remove("sticky-nav-active");
+    }
+  }
+  });
+</script>
 </body>

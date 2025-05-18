@@ -7,25 +7,6 @@
   <link rel="stylesheet" href="form.css">
 </head>
 
-<!-- NAVIGÁCIÓS BAR RAGADÁSÁT MŰKÖDTETŐ SCRIPT -->
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    const body = document.body;
-
-    if(window.innerWidth > 768)
-    {
-      if (window.scrollY > 170) {
-        navbar.classList.add("sticky");
-        body.classList.add("sticky-nav-active");
-      } else {
-        navbar.classList.remove("sticky");
-        body.classList.remove("sticky-nav-active");
-    }
-  }
-  });
-</script>
-
 <body>
   <!-- Ugrás a tartalomhoz link – az oldal legelején -->
   <a href="#main-content" class="skip-link">Ugrás a fő tartalomhoz</a>
@@ -95,23 +76,24 @@
           <li><a href="http://birkozoszov.hu/docs/csbjegyzokonyv20160210mbsz.pdf" target="_blank">Csapatbajnoki versenyjegyzőkönyv (PDF)</a></li>
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-feln-csb-nevezesi-lap-word-2025.docx" target="_blank">Felnőtt csapatbajnokság csapat nevezési lap</a></li>
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-feln-csb-egymas-elleni-word-2025.docx" target="_blank">Felnőtt csapatbajnoki egymás elleni jegyzőkönyv</a></li>
-          <br>
+          
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-up-csb-nevezesi-lap-word-2025.docx" target="_blank">Utánpótlás férfi csapatbajnokság csapat nevezési lap</a></li>
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-up-csb-egymas-elleni-word-2025.docx" target="_blank">Utánpótlás férfi csapatbajnoki egymás elleni jegyzőkönyv</a></li>
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-up-noi-csb-nevezesi-lap-word-2025.docx" target="_blank">Utánpótlás női csapatbajnokság csapat nevezési lap</a></li>
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-up-noi-csb-egymas-elleni-word-2025.docx" target="_blank">Utánpótlás női csapatbajnoki egymás elleni jegyzőkönyv</a></li>
-          <br>
+          
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-u15-csb-nevezesi-lap-word-2025.docx" target="_blank">U15-ös csapatbajnokság csapat nevezési lap</a></li>
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-u15-csb-egymas-elleni-word-2025.docx" target="_blank">U15-ős csapatbajnoki egymás elleni jegyzőkönyv</a></li>
-          <br>
+          
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-u13-lany-csb-nevezesi-lap-word-2025.docx" target="_blank">U13-as leány csapatbajnokság csapat nevezési lap</a></li>
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-u13-lany-csb-egymas-elleni-word-2025.docx" target="_blank">U13-as leány csapatbajnoki egymás elleni jegyzőkönyv</a></li>
-          <br>
+        
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-u12-csb-nevezesi-lap-word-2025.docx" target="_blank">U12-es leány csapatbajnokság csapat nevezési lap</a></li>
           <li><a href="https://birkozoszov.hu/images/uploaded/urlapok-mbsz/urlapok-2025/mbsz-u12-csb-egymas-elleni-word-2025.docx" target="_blank">U12-es leány csapatbajnoki egymás elleni jegyzőkönyv</a></li>
-          <br>
-          <p>(A dokumentumok elektronikusan kitölthetők)</p>
+          
+          
         </ol>
+        <p>(A dokumentumok elektronikusan kitölthetők)</p>
       </div>
     </main>
 
@@ -123,4 +105,23 @@
         navbar.classList.toggle('active');
       });
     </script>
+
+    <!-- NAVIGÁCIÓS BAR RAGADÁSÁT MŰKÖDTETŐ SCRIPT -->
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    const body = document.body;
+
+    if(window.innerWidth > 768)
+    {
+      if (window.scrollY > 170) {
+        navbar.classList.add("sticky");
+        body.classList.add("sticky-nav-active");
+      } else {
+        navbar.classList.remove("sticky");
+        body.classList.remove("sticky-nav-active");
+    }
+  }
+  });
+</script>
 </body>

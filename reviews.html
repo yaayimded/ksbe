@@ -7,24 +7,6 @@
   <link rel="stylesheet" href="reviews.css">
 </head>
 
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    const body = document.body;
-
-    if(window.innerWidth > 768)
-    {
-      if (window.scrollY > 170) {
-        navbar.classList.add("sticky");
-        body.classList.add("sticky-nav-active");
-      } else {
-        navbar.classList.remove("sticky");
-        body.classList.remove("sticky-nav-active");
-    }
-  }
-  });
-</script>
-
 <body>
   <!-- Ugrás a tartalomhoz link – az oldal legelején -->
   <a href="#main-content" class="skip-link">Ugrás a fő tartalomhoz</a>
@@ -57,7 +39,7 @@
 
     <main class="content">
       <div class="content-box">
-        <h2>Szülői vélemények:</h3>
+        <h2>Szülői vélemények:</h2>
         <p>
           “Szia Sanyi<br>
           Miért szeretünk járni az edzésekre?<br>
@@ -130,7 +112,7 @@
 
 <section class="form-section">
   <div class="form-container">
-    <h1 class="urcim">Írj te is véleményt!</h1>
+    <h2 class="urcim">Írj te is véleményt!</h2>
     <form id="review-form" onsubmit="sendEmail(event)">
       <div class="form-left">
         <label for="name">Név:</label>
@@ -140,8 +122,8 @@
         <input type="text" id="child-name" name="child_name">
 
         <div class="gender">
-          <label for="gender-boy"><input type="radio" name="gender" value="fiú"> Fiú</label>
-          <label for="gender-girl"><input type="radio" name="gender" value="lány"> Lány</label>
+          <label for="gender-boy"><input type="radio" name="gender" value="fiú" id="gender-boy"> Fiú</label>
+          <label for="gender-girl"><input type="radio" name="gender" value="lány" id="gender-girl"> Lány</label>
         </div>
       </div>
 
@@ -152,7 +134,7 @@
 
       <div class="consent">
         <label for="consent">
-          <input type="checkbox" name="consent">
+          <input type="checkbox" name="consent" id="consent">
           Beleegyezek, hogy a véleményem megjelenhessen az egyesület Facebook-oldalán és a weboldalon.
         </label>
       </div>
@@ -175,4 +157,22 @@
         navbar.classList.toggle('active');
       });
     </script>
+
+    <script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    const body = document.body;
+
+    if(window.innerWidth > 768)
+    {
+      if (window.scrollY > 170) {
+        navbar.classList.add("sticky");
+        body.classList.add("sticky-nav-active");
+      } else {
+        navbar.classList.remove("sticky");
+        body.classList.remove("sticky-nav-active");
+    }
+  }
+  });
+</script>
 </body>
