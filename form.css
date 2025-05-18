@@ -164,3 +164,54 @@ body
     border-top: 1px solid #ccc;
   }
 }
+
+@media print {
+  /* Elrejtjük a fejlécet, menüt, hamburger ikont */
+  .header,
+  .navbar,
+  .menu-toggle,
+  .skip-link,
+  script,
+  footer {
+    display: none !important;
+  }
+
+  /* Háttérkép eltávolítása és szín fehérre állítása */
+  body,
+  .content {
+    background: white !important;
+    background-image: none !important;
+    color: black !important;
+  }
+
+  /* Szövegdoboz kinézet egyszerűsítése */
+  .content-box {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0;
+  }
+
+  /* Betűméret, margók nyomtatáshoz */
+  body {
+    font-size: 12pt;
+    margin: 2cm;
+  }
+
+  /* Linkek ne legyenek kékek */
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  /* Oldaltörés segítése ha szükséges */
+  h2, h3 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p {
+    page-break-inside: avoid;
+  }
+}
