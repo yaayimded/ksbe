@@ -42,6 +42,11 @@ body
     max-height: 100%;
     object-fit: contain;
   }
+
+  #dagi
+  {
+    height: 150px;
+  }
   
   .title {
     text-align: center;
