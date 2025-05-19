@@ -209,24 +209,48 @@ body
     transition: height 0.2s;
   }
 
-  .carousel-pic
-  {
-    height: 10%;
-  }
+.kari
+{
+  width: 90%;       /* vagy pl. 800px ha fixet akarsz */
+  max-width: 1000px;
+  margin: 0 auto;   /* középre igazítja */
+}
 
-  .carousel-cell
-  {
-    width: 45%; /* vagy 50% - padding miatt lehet picit kevesebb */
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: brightness(0.7);
-  }
+  .main-carousel {
+  width: 90%;       /* vagy pl. 800px ha fixet akarsz */
+  max-width: 1000px;
+  margin: 0 auto;   /* középre igazítja */
+}
 
+
+  .carousel-cell {
+  width: 45%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #000; /* vagy világosabb háttér */
+  height: 500px; /* 500px */
+}
+
+.carousel-pic {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
+
+
+/*
   .carousel-cell img
   {
     max-height: 600px;
     max-width: 100%;
     /*height: auto;
-    width: auto;*/
+    width: auto;
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -235,7 +259,7 @@ body
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
-  }
+  }*/
 
   .carousel.is-fullscreen .carousel-cell {
     height: 100%;
@@ -342,6 +366,7 @@ body
     font-size: 200%;
   }
 
+  /* ezeket a magasságokat majd a véglegeshez jobban be kellene állítani */
   .content-box
   {
     width: 100%;
@@ -360,6 +385,11 @@ body
   #nagyrambo
   {
     height: 200%;
+  }
+
+  #nagycsabi
+  {
+    max-width: 100%;
   }
 }
 
