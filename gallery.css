@@ -209,13 +209,6 @@ body
     transition: height 0.2s;
   }
 
-.kari
-{
-  width: 90%;       /* vagy pl. 800px ha fixet akarsz */
-  max-width: 1000px;
-  margin: 0 auto;   /* középre igazítja */
-}
-
   .main-carousel {
   width: 90%;       /* vagy pl. 800px ha fixet akarsz */
   max-width: 1000px;
